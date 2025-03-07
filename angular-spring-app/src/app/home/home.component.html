@@ -1,0 +1,8 @@
+<h2>Bienvenido</h2>
+<p>
+  Estás autenticado como
+  {{ authService.isLoggedIn() ? username : "Invitado" }}
+</p>
+<button *ngIf="authService.isLoggedIn()" (click)="authService.logout()">
+  Cerrar Sesión
+</button>
